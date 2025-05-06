@@ -1,0 +1,180 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.estrutura {
+  display: grid;
+  grid-template-columns: 2fr minmax(0, 3fr) minmax(0, 6fr);
+  gap: 40px;
+  min-height: 100vh;
+  height: auto;
+}
+
+.estrutura-fixa {
+  background: white;
+  padding-top: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Saira", sans-serif;
+}
+
+.estrutura-fixa header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.header-logo {
+  padding: 1rem 0;
+}
+
+.header-logo p {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-bottom: 6rem;
+}
+
+/* Container principal */
+.profile-wrapper {
+  display: inline-block;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Foto de perfil */
+.profile-image {
+  width: 66px;
+  height: 66px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+}
+
+/* Card de hover */
+.profile-hover-card {
+  position: absolute;
+  bottom: 130%;
+  left: 200%;
+  transform: translateX(-50%) translateY(10px);
+  opacity: 0;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+.hover-image {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Efeitos de hover */
+.profile-container:hover .profile-image {
+  transform: scale(1.6);
+  margin-bottom: 16px;
+  margin-left: 28px;
+}
+
+.profile-container:hover .profile-hover-card {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Emoji do título */
+.tech-emoji {
+  width: 26px;
+  height: 26px;
+  margin-left: 5px;
+}
+
+.header-title h1 {
+  font-size: xx-large;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.btn-header-geral {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-header-geral a{
+  text-decoration: none;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-header {
+  background-color: #1a1a1a;
+  color: #f6f6f6;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  font-size: large;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Efeito hover CORRIGIDO */
+.btn-header:hover .btn-video {
+  opacity: 1;
+}
+
+.btn-header:hover .btn-text {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.estrutura-movel {
+  overflow-y: auto;
+  height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Saira", sans-serif;
+}
