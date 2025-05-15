@@ -7,14 +7,20 @@
 
   /* Estrutura principal */
   .estrutura {
-    grid-template-columns: 1fr; /* Coluna única */
-    gap: 20px;
-    padding: 0 16px;
+    display: block; /* Troca grid por fluxo linear */
+    min-height: auto;
+    overflow-y: auto; /* Permite rolagem */
+  }
+
+  .estrutura-fixa, 
+  .estrutura-movel {
+    height: auto !important; /* Remove alturas fixas */
+    overflow: visible !important;
   }
 
   .estrutura-fixa {
-    height: auto;
-    padding-top: 4rem;
+    position: relative; /* Remove qualquer posicionamento fixo */
+    padding: 1rem 16px;
   }
 
   /* Header */
@@ -60,6 +66,10 @@
   .btn-header {
     width: 100%;
     height: 50px;
+  }
+
+  .estrutura-movel {
+    padding: 0 16px 2rem; /* Espaçamento interno */
   }
 
   /* Projetos */
