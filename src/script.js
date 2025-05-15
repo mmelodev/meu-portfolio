@@ -38,15 +38,23 @@ document.querySelectorAll(".carousel").forEach((carousel, i) => {
     });
   }
 
-  carousel.parentElement.querySelector(".prev").addEventListener("click", () => {
-    let index = [...items].findIndex((item) => item.classList.contains("active"));
-    showItem((index - 1 + items.length) % items.length);
-  });
+  carousel.parentElement
+    .querySelector(".prev")
+    .addEventListener("click", () => {
+      let index = [...items].findIndex((item) =>
+        item.classList.contains("active")
+      );
+      showItem((index - 1 + items.length) % items.length);
+    });
 
-  carousel.parentElement.querySelector(".next").addEventListener("click", () => {
-    let index = [...items].findIndex((item) => item.classList.contains("active"));
-    showItem((index + 1) % items.length);
-  });
+  carousel.parentElement
+    .querySelector(".next")
+    .addEventListener("click", () => {
+      let index = [...items].findIndex((item) =>
+        item.classList.contains("active")
+      );
+      showItem((index + 1) % items.length);
+    });
 
   dots.forEach((dot) => {
     dot.addEventListener("click", () => {
@@ -55,7 +63,6 @@ document.querySelectorAll(".carousel").forEach((carousel, i) => {
     });
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const stacks = document.querySelectorAll(".stack");
