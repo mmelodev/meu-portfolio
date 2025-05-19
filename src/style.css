@@ -598,14 +598,6 @@ body {
   justify-content: center;
 }
 
-.f-btn a {
-  color: #1a1a1a;
-}
-
-.f-btn .wpp {
-  color: #f6f6f6;
-}
-
 .footer-btn-main {
   width: 170px;
 }
@@ -616,6 +608,7 @@ body {
 
 .footer-btn-add {
   background-color: #5f5f5f;
+  color: #f6f6f6;
   width: 230px;
 }
 
