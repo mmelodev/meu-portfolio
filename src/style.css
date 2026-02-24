@@ -420,7 +420,7 @@ body {
 
 .redes-contatos-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   padding: 2rem;
   gap: 2rem;
 }
