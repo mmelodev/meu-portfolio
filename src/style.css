@@ -182,8 +182,8 @@ body {
 }
 
 .imagens-slider {
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
